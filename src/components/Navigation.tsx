@@ -170,6 +170,12 @@ export default function Navigation() {
         </div>
       </motion.nav>
 
+      {/* Mobile mask — solid strip at very top to clip content above header */}
+      <div
+        className="fixed top-0 left-0 right-0 lg:hidden"
+        style={{ height: 'env(safe-area-inset-top, 0px)', background: '#0B1F3A', zIndex: 52 }}
+      />
+
       {/* Mobile top bar */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
