@@ -9,20 +9,22 @@ import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
-    <main className="relative">
-      {/* Background */}
-      <ParticleCanvas />
-
-      {/* Navigation */}
+    <>
+      {/* Navigation sits outside main so clip-path on main doesn't affect it */}
       <Navigation />
 
-      {/* Sections */}
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Skills />
-      <Contact />
-    </main>
+      <main className="relative mobile-content-clip">
+        {/* Background */}
+        <ParticleCanvas />
+
+        {/* Sections */}
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
+      </main>
+    </>
   );
 }

@@ -198,6 +198,13 @@ body {
   z-index: 9999;
 }
 
+/* Clip scrolling content at the mobile header's bottom edge */
+@media (max-width: 1023px) {
+  .mobile-content-clip {
+    clip-path: inset(calc(env(safe-area-inset-top, 0px) + 56px) 0 0 0);
+  }
+}
+
 /* Prevent iOS zoom on input focus */
 @media (max-width: 1024px) {
   .chat-input { font-size: 16px !important; }
