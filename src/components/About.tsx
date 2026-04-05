@@ -14,8 +14,8 @@ const FOCUS_AREAS = [
 function SectionHeader({ number, title }: { number: string; title: string }) {
   return (
     <div className="flex items-center gap-4 mb-12">
-      <span className="section-number">{number}</span>
-      <div className="w-8 h-px" style={{ background: 'var(--glass-border)' }} />
+      <span className="section-number hidden sm:inline">{number}</span>
+      <div className="w-8 h-px hidden sm:block" style={{ background: 'var(--glass-border)' }} />
       <h2
         className="text-3xl lg:text-4xl font-bold"
         style={{ fontFamily: 'var(--font-space-grotesk)', color: 'var(--cream)' }}
@@ -32,7 +32,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="relative py-28" style={{ paddingLeft: '5rem' }}>
+    <section id="about" className="relative py-28 lg:pl-20">
       <div className="max-w-6xl mx-auto px-6 lg:px-16">
         <SectionHeader number="01 / ABOUT" title="About Me" />
 

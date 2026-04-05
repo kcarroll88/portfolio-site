@@ -8,11 +8,11 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="contact" className="relative py-28 pb-40" style={{ paddingLeft: '5rem' }}>
+    <section id="contact" className="relative py-28 pb-40 lg:pl-20">
       <div className="max-w-6xl mx-auto px-6 lg:px-16">
         <div className="flex items-center gap-4 mb-16">
-          <span className="section-number">05 / CONTACT</span>
-          <div className="w-8 h-px" style={{ background: 'var(--glass-border)' }} />
+          <span className="section-number hidden sm:inline">05 / CONTACT</span>
+          <div className="w-8 h-px hidden sm:block" style={{ background: 'var(--glass-border)' }} />
           <h2
             className="text-3xl lg:text-4xl font-bold"
             style={{ fontFamily: 'var(--font-space-grotesk)', color: 'var(--cream)' }}

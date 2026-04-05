@@ -235,11 +235,11 @@ export default function Projects() {
   const rest = PROJECTS.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="relative py-28" style={{ paddingLeft: '5rem' }}>
+    <section id="projects" className="relative py-28 lg:pl-20">
       <div className="max-w-6xl mx-auto px-6 lg:px-16">
         <div className="flex items-center gap-4 mb-12">
-          <span className="section-number">02 / PROJECTS</span>
-          <div className="w-8 h-px" style={{ background: 'var(--glass-border)' }} />
+          <span className="section-number hidden sm:inline">02 / PROJECTS</span>
+          <div className="w-8 h-px hidden sm:block" style={{ background: 'var(--glass-border)' }} />
           <h2
             className="text-3xl lg:text-4xl font-bold"
             style={{ fontFamily: 'var(--font-space-grotesk)', color: 'var(--cream)' }}

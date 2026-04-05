@@ -50,8 +50,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center"
-      style={{ paddingLeft: '5rem' }}
+      className="relative min-h-screen flex items-center lg:pl-20"
     >
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-16 py-20">
         <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-center">
@@ -95,7 +94,7 @@ export default function Hero() {
                 Hey, I&apos;m
               </p>
               <h1
-                className="text-6xl lg:text-8xl font-bold leading-none tracking-tight mb-6"
+                className="text-5xl lg:text-8xl font-bold leading-none tracking-tight mb-6"
                 style={{
                   fontFamily: 'var(--font-space-grotesk)',
                   color: 'var(--cream)',

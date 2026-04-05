@@ -95,8 +95,8 @@ export default function ChatInterface() {
 
   return (
     <div
-      className="glass rounded-xl overflow-hidden flex flex-col glow-gold"
-      style={{ height: '420px', minWidth: '340px', maxWidth: '480px' }}
+      className="glass rounded-xl overflow-hidden flex flex-col glow-gold w-full lg:w-auto"
+      style={{ height: '420px', maxWidth: '480px' }}
     >
       {/* Terminal header */}
       <div
