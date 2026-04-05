@@ -182,6 +182,7 @@ export default function Navigation() {
           borderBottom: '1px solid var(--glass-border)',
           paddingTop: 'calc(env(safe-area-inset-top, 0px) + 1rem)',
           paddingBottom: '1rem',
+          overflow: 'hidden',
         }}
       >
         <button
