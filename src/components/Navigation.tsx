@@ -170,27 +170,24 @@ export default function Navigation() {
         </div>
       </motion.nav>
 
-      {/* Mobile mask — solid strip at very top to clip content above header */}
+      {/* Mobile top bar — wrapper clips content at viewport top edge */}
       <div
-        className="fixed top-0 left-0 right-0 lg:hidden"
-        style={{ height: 'env(safe-area-inset-top, 0px)', background: '#0B1F3A', zIndex: 52 }}
-      />
-
-      {/* Mobile top bar */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: visible ? 1 : 0, y: visible ? 0 : -10 }}
-        className="fixed top-0 left-0 right-0 z-50 lg:hidden px-6 flex items-center justify-between"
-        style={{
-          background: 'linear-gradient(to bottom, rgba(11, 31, 58, 0.97) 0%, rgba(11, 31, 58, 0.55) 100%)',
-          backdropFilter: 'blur(14px)',
-          WebkitBackdropFilter: 'blur(14px)',
-          borderBottom: '1px solid var(--glass-border)',
-          paddingTop: 'calc(env(safe-area-inset-top, 0px) + 1rem)',
-          paddingBottom: '1rem',
-          overflow: 'hidden',
-        }}
+        className="fixed top-0 left-0 right-0 z-50 lg:hidden"
+        style={{ overflow: 'hidden' }}
       >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: visible ? 1 : 0 }}
+          className="px-6 flex items-center justify-between"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(11, 31, 58, 0.97) 0%, rgba(11, 31, 58, 0.55) 100%)',
+            backdropFilter: 'blur(14px)',
+            WebkitBackdropFilter: 'blur(14px)',
+            borderBottom: '1px solid var(--glass-border)',
+            paddingTop: 'calc(env(safe-area-inset-top, 0px) + 1rem)',
+            paddingBottom: '1rem',
+          }}
+        >
         <button
           onClick={() => scrollTo('hero')}
           className="font-sans font-bold text-base tracking-widest"
@@ -221,7 +218,8 @@ export default function Navigation() {
             />
           ))}
         </button>
-      </motion.div>
+        </motion.div>
+      </div>
 
       {/* Mobile menu */}
       <AnimatePresence>
