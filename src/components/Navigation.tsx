@@ -65,12 +65,17 @@ export default function Navigation() {
       if (el) observer.observe(el);
     });
 
-    const onScroll = () => setVisible(window.scrollY > 80);
-    window.addEventListener('scroll', onScroll);
+    const getScrollTop = () => {
+      const el = document.getElementById('scroll-root');
+      return el ? el.scrollTop : window.scrollY;
+    };
+    const onScroll = () => setVisible(getScrollTop() > 80);
+    const scrollEl = document.getElementById('scroll-root') ?? window;
+    scrollEl.addEventListener('scroll', onScroll);
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('scroll', onScroll);
+      scrollEl.removeEventListener('scroll', onScroll);
     };
   }, []);
 

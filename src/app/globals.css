@@ -198,9 +198,16 @@ body {
   z-index: 9999;
 }
 
-/* Clip scrolling content at the mobile header's bottom edge */
+/* Mobile: fixed scroll container so clip-path stays locked to the viewport */
 @media (max-width: 1023px) {
-  .mobile-content-clip {
+  #scroll-root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     clip-path: inset(calc(env(safe-area-inset-top, 0px) + 56px) 0 0 0);
   }
 }

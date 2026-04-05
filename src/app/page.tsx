@@ -10,21 +10,21 @@ import Contact from '@/components/Contact';
 export default function Home() {
   return (
     <>
-      {/* Navigation sits outside main so clip-path on main doesn't affect it */}
       <Navigation />
 
-      <main className="relative mobile-content-clip">
-        {/* Background */}
-        <ParticleCanvas />
-
-        {/* Sections */}
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Contact />
-      </main>
+      {/* On mobile: fixed scroll container with clip-path locks the clipping boundary
+          to the viewport regardless of scroll position */}
+      <div id="scroll-root">
+        <main className="relative">
+          <ParticleCanvas />
+          <Hero />
+          <About />
+          <Projects />
+          <Experience />
+          <Skills />
+          <Contact />
+        </main>
+      </div>
     </>
   );
 }
