@@ -198,12 +198,12 @@ body {
   z-index: 9999;
 }
 
-/* Mobile: fixed scroll container starting at header bottom — overflow clips content there,
-   no clip-path needed so backdrop-filter on the header works correctly */
+/* Mobile: fixed scroll container at top:0 — overflow-y clips content at viewport top,
+   no clip-path so backdrop-filter on the header can sample content behind it */
 @media (max-width: 1023px) {
   #scroll-root {
     position: fixed;
-    top: calc(env(safe-area-inset-top, 0px) + 56px);
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
