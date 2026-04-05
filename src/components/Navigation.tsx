@@ -67,10 +67,13 @@ export default function Navigation() {
 
     const getScrollTop = () => {
       const el = document.getElementById('scroll-root');
-      return el ? el.scrollTop : window.scrollY;
+      // On mobile, #scroll-root is the scroll container; on desktop, use window
+      return (el && el.scrollHeight > el.clientHeight) ? el.scrollTop : window.scrollY;
     };
     const onScroll = () => setVisible(getScrollTop() > 80);
-    const scrollEl = document.getElementById('scroll-root') ?? window;
+    const scrollRootEl = document.getElementById('scroll-root');
+    const isScrollRoot = scrollRootEl ? scrollRootEl.scrollHeight > scrollRootEl.clientHeight : false;
+    const scrollEl = isScrollRoot ? scrollRootEl! : window;
     scrollEl.addEventListener('scroll', onScroll);
 
     return () => {

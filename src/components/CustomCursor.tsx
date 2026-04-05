@@ -12,9 +12,9 @@ export default function CustomCursor() {
     window.scrollTo(0, 0);
   }, []);
 
-  if (isTouch) return null;
-
   useEffect(() => {
+    if (isTouch) return;
+
     const dot = dotRef.current;
     const ring = ringRef.current;
     if (!dot || !ring) return;
@@ -75,23 +75,21 @@ export default function CustomCursor() {
       cancelAnimationFrame(raf);
       observer.disconnect();
     };
-  }, []);
+  }, [isTouch]);
+
+  if (isTouch) return null;
 
   return (
     <>
-      {/* Small dot */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-gold pointer-events-none z-[9999] will-change-transform"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] will-change-transform"
         style={{ backgroundColor: 'var(--gold)' }}
       />
-      {/* Lagging ring */}
       <div
         ref={ringRef}
         className="fixed top-0 left-0 w-10 h-10 rounded-full pointer-events-none z-[9998] will-change-transform transition-[width,height,border-color] duration-200"
-        style={{
-          border: '1px solid rgba(201, 150, 58, 0.4)',
-        }}
+        style={{ border: '1px solid rgba(201, 150, 58, 0.4)' }}
       />
     </>
   );
