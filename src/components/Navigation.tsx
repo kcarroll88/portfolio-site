@@ -185,7 +185,7 @@ export default function Navigation() {
           animate={{ opacity: visible ? 1 : 0 }}
           className="px-6 flex items-center justify-between"
           style={{
-            background: 'linear-gradient(to bottom, rgba(11, 31, 58, 1) 0%, rgba(11, 31, 58, 0.95) 35%, rgba(11, 31, 58, 0.6) 70%, rgba(11, 31, 58, 0.35) 100%)',
+            background: 'linear-gradient(to bottom, rgba(11, 31, 58, 1) 0%, rgba(11, 31, 58, 0.88) 45%, rgba(11, 31, 58, 0.4) 75%, rgba(11, 31, 58, 0.18) 100%)',
             backdropFilter: 'blur(14px)',
             WebkitBackdropFilter: 'blur(14px)',
             borderBottom: '1px solid var(--glass-border)',

@@ -209,8 +209,8 @@ body {
     bottom: 0;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0px, transparent calc(env(safe-area-inset-top, 0px) + 40px), black calc(env(safe-area-inset-top, 0px) + 72px));
-    mask-image: linear-gradient(to bottom, transparent 0px, transparent calc(env(safe-area-inset-top, 0px) + 40px), black calc(env(safe-area-inset-top, 0px) + 72px));
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0px, transparent calc(env(safe-area-inset-top, 0px) + 48px), black calc(env(safe-area-inset-top, 0px) + 62px));
+    mask-image: linear-gradient(to bottom, transparent 0px, transparent calc(env(safe-area-inset-top, 0px) + 48px), black calc(env(safe-area-inset-top, 0px) + 62px));
   }
 }
 
