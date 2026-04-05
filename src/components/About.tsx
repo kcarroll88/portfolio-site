@@ -154,7 +154,7 @@ export default function About() {
                 className="text-xs"
                 style={{ fontFamily: 'var(--font-jetbrains-mono)', color: 'var(--cream-dim)' }}
               >
-                currently building
+                currently building langchain-rag
               </span>
             </div>
           </motion.div>
