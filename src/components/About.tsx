@@ -150,11 +150,19 @@ export default function About() {
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
                 style={{ background: '#28CA41' }}
               />
-              <span
-                className="text-xs"
-                style={{ fontFamily: 'var(--font-jetbrains-mono)', color: 'var(--cream-dim)' }}
-              >
-                currently building langchain-rag
+              <span className="flex flex-col">
+                <span
+                  className="text-xs"
+                  style={{ fontFamily: 'var(--font-jetbrains-mono)', color: 'var(--cream-dim)' }}
+                >
+                  currently building
+                </span>
+                <span
+                  className="text-xs"
+                  style={{ fontFamily: 'var(--font-jetbrains-mono)', color: 'var(--cream)' }}
+                >
+                  langchain-rag
+                </span>
               </span>
             </div>
           </motion.div>
