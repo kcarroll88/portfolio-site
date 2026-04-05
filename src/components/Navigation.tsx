@@ -174,7 +174,8 @@ export default function Navigation() {
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: visible ? 1 : 0, y: visible ? 0 : -10 }}
-        className="fixed top-0 left-0 right-0 z-50 lg:hidden glass px-6 py-4 flex items-center justify-between"
+        className="fixed top-0 left-0 right-0 z-50 lg:hidden px-6 py-4 flex items-center justify-between"
+        style={{ background: 'rgba(11, 31, 58, 0.97)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '1px solid var(--glass-border)' }}
       >
         <button
           onClick={() => scrollTo('hero')}

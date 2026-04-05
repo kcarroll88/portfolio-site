@@ -24,7 +24,6 @@
 
 html {
   scroll-behavior: smooth;
-  cursor: none;
 }
 
 body {
@@ -33,9 +32,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Hide default cursor everywhere */
-*, *::before, *::after {
-  cursor: none !important;
+/* Hide default cursor on desktop only */
+@media (hover: hover) {
+  html { cursor: none; }
+  *, *::before, *::after { cursor: none !important; }
 }
 
 /* Custom scrollbar */
@@ -196,6 +196,11 @@ body {
   opacity: 0.025;
   pointer-events: none;
   z-index: 9999;
+}
+
+/* Prevent iOS zoom on input focus */
+@media (max-width: 1024px) {
+  .chat-input { font-size: 16px !important; }
 }
 
 /* Markdown inside chat */

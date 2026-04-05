@@ -298,7 +298,7 @@ export default function ChatInterface() {
           onKeyDown={onKeyDown}
           placeholder="Ask anything..."
           disabled={isLoading}
-          className="flex-1 bg-transparent text-sm outline-none placeholder-opacity-40"
+          className="flex-1 bg-transparent text-sm outline-none placeholder-opacity-40 chat-input"
           style={{
             color: 'var(--cream)',
             fontFamily: 'var(--font-jetbrains-mono)',
