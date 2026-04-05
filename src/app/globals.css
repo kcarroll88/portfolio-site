@@ -199,7 +199,7 @@ body {
 }
 
 /* Mobile: fixed scroll container at top:0 — overflow-y clips content at viewport top,
-   no clip-path so backdrop-filter on the header can sample content behind it */
+   mask-image fades content out as it approaches the header so there's no hard cutoff line */
 @media (max-width: 1023px) {
   #scroll-root {
     position: fixed;
@@ -209,6 +209,8 @@ body {
     bottom: 0;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0px, transparent calc(env(safe-area-inset-top, 0px) + 40px), black calc(env(safe-area-inset-top, 0px) + 72px));
+    mask-image: linear-gradient(to bottom, transparent 0px, transparent calc(env(safe-area-inset-top, 0px) + 40px), black calc(env(safe-area-inset-top, 0px) + 72px));
   }
 }
 
