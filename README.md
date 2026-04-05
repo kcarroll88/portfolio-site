@@ -1,3 +1,7 @@
+<img width="1645" height="1069" alt="Screenshot 2026-04-05 at 11 49 19 AM" src="https://github.com/user-attachments/assets/c7ce9a3a-983b-410e-9909-576fe2af49b9" />
+
+
+
 # Keenan Carroll — Portfolio
 
 Personal portfolio site built with Next.js, featuring an embedded AI chat powered by Claude.
