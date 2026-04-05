@@ -176,7 +176,7 @@ export default function Navigation() {
         animate={{ opacity: visible ? 1 : 0, y: visible ? 0 : -10 }}
         className="fixed top-0 left-0 right-0 z-50 lg:hidden px-6 flex items-center justify-between"
         style={{
-          background: 'rgba(11, 31, 58, 0.82)',
+          background: 'linear-gradient(to bottom, rgba(11, 31, 58, 0.97) 0%, rgba(11, 31, 58, 0.55) 100%)',
           backdropFilter: 'blur(14px)',
           WebkitBackdropFilter: 'blur(14px)',
           borderBottom: '1px solid var(--glass-border)',
