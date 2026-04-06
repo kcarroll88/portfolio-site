@@ -52,11 +52,10 @@ export default function About() {
               className="text-lg leading-relaxed"
               style={{ color: 'var(--cream-muted)', fontFamily: 'var(--font-body)' }}
             >
-              I design and build AI-powered systems that automate real-world business operations —
-              from real estate workflows to communication pipelines and data-driven decision making.
-              My focus is on turning complex processes into{' '}
-              <span style={{ color: 'var(--cream)' }}>scalable, intelligent systems</span> using
-              modern AI tools and infrastructure.
+              I design and build AI-powered systems that solve real business problems — from{' '}
+              <span style={{ color: 'var(--cream)' }}>support automation and document intelligence</span>{' '}
+              to multi-agent platforms that replace entire workflows. My focus is on production-grade
+              systems that work, not experiments that demo well.
             </motion.p>
 
             <motion.p
@@ -66,11 +65,11 @@ export default function About() {
               className="text-lg leading-relaxed"
               style={{ color: 'var(--cream-muted)', fontFamily: 'var(--font-body)' }}
             >
-              I&apos;m currently exploring how{' '}
-              <span style={{ color: 'var(--gold)' }}>AI agents and automation</span> can reshape how
-              small businesses operate and grow. My goal is to bridge the gap between AI capability
-              and real-world business execution — not experiments, but systems that work in
-              production.
+              I&apos;m currently transitioning into AI engineering after years in{' '}
+              <span style={{ color: 'var(--gold)' }}>enterprise SaaS</span> — first as a Tier III
+              Technical Engineer, then as an Enablement Manager at WalkMe, now acquired by SAP. That
+              background gives me something most AI engineers don&apos;t have: I understand how
+              enterprise software actually gets used, where it breaks, and what teams need from it.
             </motion.p>
 
             <motion.p
@@ -80,13 +79,9 @@ export default function About() {
               className="text-lg leading-relaxed"
               style={{ color: 'var(--cream-muted)', fontFamily: 'var(--font-body)' }}
             >
-              My recent work includes a{' '}
-              <span style={{ color: 'var(--cream)' }}>full-stack band management platform</span> with
-              a team of 12 AI personas that have live write access to the database, and a{' '}
-              <span style={{ color: 'var(--cream)' }}>production RAG system</span> that lets users
-              interrogate their own documents with zero hallucination. I bring the same engineering
-              rigor to every problem — whether it&apos;s a Discord bot consulting an AI team or an
-              automated pipeline replacing hours of manual coordination.
+              My goal is to build AI systems that close the gap between what&apos;s{' '}
+              <span style={{ color: 'var(--cream)' }}>technically possible</span> and what businesses
+              can actually use.
             </motion.p>
           </div>
 
