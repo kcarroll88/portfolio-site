@@ -156,7 +156,7 @@ export default function About() {
                   className="text-xs"
                   style={{ fontFamily: 'var(--font-jetbrains-mono)', color: 'var(--cream)' }}
                 >
-                  langchain-rag
+                  react-agent-intelligence
                 </span>
               </span>
             </div>
