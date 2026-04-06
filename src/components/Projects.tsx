@@ -30,7 +30,7 @@ const PROJECTS: Project[] = [
     description:
       'A support tool that answers questions by searching a knowledge base of PDF documents. Loads docs into a vector database, finds relevant chunks via semantic search, and generates concise answers using Claude — with full source attribution. Built with LangChain, Chroma, Voyage AI embeddings, and Streamlit.',
     stack: ['Python', 'LangChain', 'Anthropic Claude', 'Voyage AI', 'ChromaDB', 'Streamlit', 'pypdf'],
-    link: 'https://nexus-support-assistant.vercel.app/',
+    link: 'https://nexus-support-assistant-azq3guy4xvxbpnpyacswuq.streamlit.app',
     status: 'live',
   },
   {
