@@ -34,6 +34,15 @@ const PROJECTS: Project[] = [
     status: 'live',
   },
   {
+    name: 'RAG Document Chat',
+    tagline: 'AI-Powered Document Q&A',
+    description:
+      'A production-style Retrieval Augmented Generation system that lets users upload a PDF and ask natural language questions — getting answers grounded exclusively in their document. No hallucination, no out-of-scope responses. Demonstrates the RAG pattern powering the next generation of B2B AI features.',
+    stack: ['Python', 'Anthropic Claude', 'Voyage AI', 'ChromaDB', 'Streamlit', 'pypdf'],
+    link: 'https://kcarroll-ai.streamlit.app',
+    status: 'live',
+  },
+  {
     name: 'Dwello',
     tagline: 'Landlord SaaS Platform',
     description:
@@ -48,14 +57,6 @@ const PROJECTS: Project[] = [
     description:
       'Processes inbound messages (SMS/email), extracts intent using LLMs, and routes actions automatically into business systems — eliminating manual coordination.',
     stack: ['Twilio', 'Make', 'Webhooks', 'LLM'],
-    status: 'complete',
-  },
-  {
-    name: 'Local Lens',
-    tagline: 'Civic Transparency App',
-    description:
-      'Extracts and organizes public meeting data into digestible insights, helping users understand local government decisions without reading dense documents.',
-    stack: ['Next.js', 'Supabase', 'Data Pipelines'],
     status: 'complete',
   },
 ];
