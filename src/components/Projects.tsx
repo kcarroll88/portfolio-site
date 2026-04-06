@@ -25,12 +25,12 @@ const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    name: 'RAG Document Chat',
-    tagline: 'AI-Powered Document Q&A',
+    name: 'Nexus Support Assistant',
+    tagline: 'RAG-Powered Knowledge Base Q&A',
     description:
-      'A production-style Retrieval Augmented Generation system that lets users upload a PDF and ask natural language questions — getting answers grounded exclusively in their document. No hallucination, no out-of-scope responses. Demonstrates the RAG pattern powering the next generation of B2B AI features.',
-    stack: ['Python', 'Anthropic Claude', 'Voyage AI', 'ChromaDB', 'Streamlit', 'pypdf'],
-    link: 'https://kcarroll-ai.streamlit.app',
+      'A support tool that answers questions by searching a knowledge base of PDF documents. Loads docs into a vector database, finds relevant chunks via semantic search, and generates concise answers using Claude — with full source attribution. Built with LangChain, Chroma, Voyage AI embeddings, and Streamlit.',
+    stack: ['Python', 'LangChain', 'Anthropic Claude', 'Voyage AI', 'ChromaDB', 'Streamlit', 'pypdf'],
+    link: 'https://nexus-support-assistant.vercel.app/',
     status: 'live',
   },
   {
