@@ -9,11 +9,23 @@ interface Project {
   description: string;
   stack: string[];
   link?: string;
+  password?: string;
   status: 'live' | 'in-progress' | 'complete';
   featured?: boolean;
 }
 
 const PROJECTS: Project[] = [
+  {
+    name: 'Apex CRM Sales Intelligence',
+    tagline: 'RAG-Powered Competitive Intelligence Agent',
+    description:
+      'A hybrid RAG sales assistant built with LangChain and Claude. Answers competitive questions by searching internal battlecards and playbooks, live web data, or both — depending on what the question needs. Uses a ReAct agent to reason step-by-step and pick the right tool for each query. Includes an LLM-as-judge eval suite scoring answers on relevance, groundedness, and completeness.',
+    stack: ['Python', 'LangChain', 'Anthropic Claude', 'Voyage AI', 'ChromaDB', 'Tavily', 'Streamlit', 'Docker', 'Railway'],
+    link: 'https://apex-sales-intel-production.up.railway.app',
+    password: 'apex2026',
+    status: 'live',
+    featured: true,
+  },
   {
     name: 'Valletta Command Center',
     tagline: 'Full-Stack Band Management Platform',
@@ -22,7 +34,6 @@ const PROJECTS: Project[] = [
     stack: ['FastAPI', 'React', 'SQLite', 'Anthropic Claude', 'Discord.py', 'Google APIs', 'Square API', 'Spotify API', 'SSE'],
     link: 'https://github.com/kcarroll88/valletta-app',
     status: 'live',
-    featured: true,
   },
   {
     name: 'Nexus Support Assistant',
@@ -137,6 +148,29 @@ function FeaturedProject({ project }: { project: Project }) {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
               </svg>
             </a>
+          )}
+
+          {/* Password */}
+          {project.password && (
+            <div className="text-right">
+              <span
+                className="text-xs tracking-widest uppercase block mb-1"
+                style={{ fontFamily: 'var(--font-jetbrains-mono)', color: 'var(--cream-muted)' }}
+              >
+                Demo password
+              </span>
+              <span
+                className="text-sm px-3 py-1 rounded"
+                style={{
+                  fontFamily: 'var(--font-jetbrains-mono)',
+                  color: 'var(--gold)',
+                  background: 'rgba(201, 150, 58, 0.1)',
+                  border: '1px solid rgba(201, 150, 58, 0.2)',
+                }}
+              >
+                {project.password}
+              </span>
+            </div>
           )}
         </div>
       </div>

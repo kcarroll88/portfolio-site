@@ -36,7 +36,15 @@ OTHER SKILLS:
 - Cross-functional enablement & program management
 
 PROJECTS:
-1. Valletta Command Center (github.com/kcarroll88/valletta-app)
+1. Apex CRM Sales Intelligence (apex-sales-intel-production.up.railway.app) [FEATURED]
+   - What: A hybrid RAG sales assistant built with LangChain and Claude that answers competitive questions by searching internal battlecards/playbooks, live web data, or both
+   - Uses a ReAct agent to reason step-by-step and pick the right tool for each query
+   - Includes an LLM-as-judge eval suite scoring answers on relevance, groundedness, and completeness
+   - Built with: Python, LangChain, Anthropic Claude (Opus 4.5), Voyage AI (embeddings), ChromaDB, Tavily, Streamlit, Docker, Railway
+   - Demo password: apex2026
+   - Status: Live
+
+2. Valletta Command Center (github.com/kcarroll88/valletta-app)
    - What: A purpose-built full-stack command center for a real working rock band — replacing scattered Google Docs, spreadsheets, and group chats with a single integrated system the whole band actually uses
    - Features: 12 AI personas (band manager, publicist, booking agent, finance specialist, Discord bot, and more) with distinct personalities and live write access to the database via Claude tool use
    - Syncs live data from: Google Calendar, Google Sheets, Google Drive, Square, Spotify, Last.fm, YouTube, Instagram, TikTok, Discord
@@ -44,23 +52,23 @@ PROJECTS:
    - Built with: FastAPI, React, SQLite, Anthropic Claude (Sonnet + Haiku), Discord.py, SSE
    - Status: Live (used daily by the band)
 
-2. RAG Document Chat (kcarroll-ai.streamlit.app)
+3. RAG Document Chat (kcarroll-ai.streamlit.app)
    - What: A production-style Retrieval Augmented Generation (RAG) system that lets users upload a PDF and ask natural language questions — getting answers grounded exclusively in their document
    - No hallucination, no out-of-scope responses — Claude can only respond using content from the uploaded document
    - Demonstrates the RAG pattern powering next-gen B2B AI features in enterprise SaaS
    - Built with: Python, Anthropic Claude, Voyage AI (embeddings), ChromaDB (vector DB), Streamlit, pypdf
    - Status: Live
 
-3. Dwello (dwello.cloud)
+4. Dwello (dwello.cloud)
    - What: A SaaS platform for landlords to manage tenants, leases, maintenance requests, and communication in one place
    - Built with: Base44, Supabase, Stripe, AI-assisted backend logic
    - Status: Live
 
-4. AI Communication Automation System
+5. AI Communication Automation System
    - What: Processes inbound messages (SMS/email), extracts intent using LLMs, and routes actions automatically into business systems — eliminating manual coordination
    - Built with: Twilio, Make (Integromat), Webhooks, LLM processing
 
-5. Local Lens
+6. Local Lens
    - What: A civic transparency app that extracts and organizes public meeting data into digestible insights — helps people understand local government decisions without reading dense documents
    - Built with: Next.js, Supabase, scraping + structured data pipelines
 
