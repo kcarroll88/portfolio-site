@@ -10,11 +10,11 @@ const EXPERIENCE = [
     period: '2023 — Present',
     type: 'current',
     description:
-      'Design and ship AI-powered systems for real-world business operations. Building tools across real estate, construction, civic tech, and communication automation. Focus on production-grade systems — not demos.',
+      'Design and ship production-grade AI systems — RAG pipelines, LangChain agents, and multi-agent platforms deployed to real users. Focus on systems that work in the real world, not just demos.',
     highlights: [
-      'Shipped Dwello, a landlord SaaS platform with AI-assisted workflows',
-      'Built automated communication pipelines processing SMS/email with LLM intent extraction',
-      'Developing construction operations platform with multi-agent task coordination',
+      'Built Apex CRM Sales Intelligence — a hybrid RAG agent with LLM-as-judge evals, deployed on Railway',
+      'Shipped Valletta Command Center — a full-stack platform with 12 AI personas and live third-party integrations',
+      'Developed multiple RAG pipelines using LangChain, Claude, Voyage AI, and ChromaDB',
     ],
   },
   {
