@@ -62,14 +62,6 @@ const PROJECTS: Project[] = [
     link: 'https://dwello.cloud',
     status: 'live',
   },
-  {
-    name: 'AI Communication Automation',
-    tagline: 'Inbound Message Processing System',
-    description:
-      'Processes inbound messages (SMS/email), extracts intent using LLMs, and routes actions automatically into business systems — eliminating manual coordination.',
-    stack: ['Twilio', 'Make', 'Webhooks', 'LLM'],
-    status: 'complete',
-  },
 ];
 
 const STATUS_STYLES = {
