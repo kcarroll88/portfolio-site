@@ -36,6 +36,15 @@ const PROJECTS: Project[] = [
     status: 'live',
   },
   {
+    name: 'Meridian Analytics Intelligence Assistant',
+    tagline: 'Dual-Source ReAct Research Agent',
+    description:
+      'An AI research assistant that routes natural language queries to internal documents or live web search — automatically. Built on the ReAct agent pattern with a visual reasoning trace so you can follow every thought, action, and observation in real time. Combines Voyage AI semantic search over a ChromaDB knowledge base with Tavily web retrieval in a single query.',
+    stack: ['Python', 'LangChain', 'Anthropic Claude', 'Voyage AI', 'ChromaDB', 'Tavily', 'Streamlit'],
+    link: 'https://github.com/kcarroll88/meridian-ops-intel',
+    status: 'live',
+  },
+  {
     name: 'Nexus Support Assistant',
     tagline: 'RAG-Powered Knowledge Base Q&A',
     description:
@@ -51,15 +60,6 @@ const PROJECTS: Project[] = [
       'A production-style Retrieval Augmented Generation system that lets users upload a PDF and ask natural language questions — getting answers grounded exclusively in their document. No hallucination, no out-of-scope responses. Demonstrates the RAG pattern powering the next generation of B2B AI features.',
     stack: ['Python', 'Anthropic Claude', 'Voyage AI', 'ChromaDB', 'Streamlit', 'pypdf'],
     link: 'https://kcarroll-ai.streamlit.app',
-    status: 'live',
-  },
-  {
-    name: 'Dwello',
-    tagline: 'Landlord SaaS Platform',
-    description:
-      'A platform designed to help landlords manage tenants, leases, maintenance requests, and communication in one place. Built rapidly using AI-assisted development workflows.',
-    stack: ['Base44', 'Supabase', 'Stripe', 'AI Backend'],
-    link: 'https://dwello.cloud',
     status: 'live',
   },
 ];
