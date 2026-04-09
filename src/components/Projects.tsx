@@ -54,12 +54,12 @@ const PROJECTS: Project[] = [
     status: 'live',
   },
   {
-    name: 'RAG Document Chat',
-    tagline: 'AI-Powered Document Q&A',
+    name: 'CRM Customer Health Monitor',
+    tagline: 'AI-Powered Account Health Scoring Dashboard',
     description:
-      'A production-style Retrieval Augmented Generation system that lets users upload a PDF and ask natural language questions — getting answers grounded exclusively in their document. No hallucination, no out-of-scope responses. Demonstrates the RAG pattern powering the next generation of B2B AI features.',
-    stack: ['Python', 'Anthropic Claude', 'Voyage AI', 'ChromaDB', 'Streamlit', 'pypdf'],
-    link: 'https://kcarroll-ai.streamlit.app',
+      'An AI-powered health scoring dashboard for CRM account managers. Claude analyzes each customer account across login activity, support tickets, email engagement, NPS, and sentiment — producing a 1–100 health score, a risk classification (Healthy / Warning / Critical), and specific recommended actions per account. Includes automated daily digest reports and an optional 8am scheduler.',
+    stack: ['Python', 'Anthropic Claude', 'Streamlit', 'Resend'],
+    link: 'https://crm-customer-health-monitor-gx3eohgt2yw2tczeuunckl.streamlit.app',
     status: 'live',
   },
 ];
