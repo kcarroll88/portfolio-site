@@ -27,13 +27,13 @@ const PROJECTS: Project[] = [
     featured: true,
   },
   {
-    name: 'Valletta Command Center',
-    tagline: 'Full-Stack Band Management Platform',
+    name: 'Meridian Platform',
+    tagline: 'Multi-Tenant RAG API',
     description:
-      'A purpose-built command center for a real working rock band — replacing scattered Google Docs, spreadsheets, and group chats with a single integrated system. Features 12 AI personas (band manager, publicist, booking agent, finance specialist, and more) with distinct personalities and live write access to the database. Syncs from Google Calendar, Spotify, Square, YouTube, Instagram, and Discord. Includes a Felix Discord bot that consults the full AI team mid-conversation.',
-    stack: ['FastAPI', 'React', 'SQLite', 'Anthropic Claude', 'Discord.py', 'Google APIs', 'Square API', 'Spotify API', 'SSE'],
-    link: 'https://github.com/kcarroll88/valletta-app',
-    status: 'live',
+      'A production-grade multi-tenant RAG API where each tenant gets isolated document storage, per-tenant rate limiting via Redis sliding window, and full usage tracking with trace IDs. JWT admin auth, hashed API keys for tenants, per-tenant ChromaDB collection namespaces, and LangSmith observability. Load tested to 166 RPS at 0% error rate with infrastructure overhead under 50ms.',
+    stack: ['FastAPI', 'PostgreSQL', 'Redis', 'ChromaDB', 'Anthropic Claude', 'Voyage AI', 'LangChain', 'LangSmith', 'Docker', 'Railway'],
+    link: 'https://github.com/kcarroll88/meridian-platform',
+    status: 'in-progress',
   },
   {
     name: 'Meridian Analytics Intelligence Assistant',
