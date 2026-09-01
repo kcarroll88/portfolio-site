@@ -16,6 +16,16 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    name: 'hyprmac',
+    tagline: 'Tiling Window Manager for macOS',
+    description:
+      "A native tiling window manager for macOS in the shape of Hyprland — dwindle layout, gaps, a hyprland.conf-style config file, vim keybindings and five workspaces, plus a canvas that paints the desktop beneath your windows. Written in Swift straight against the macOS Accessibility API with no dependencies and no bundled runtime, so the whole window manager ships as a signed, notarized 1 MB app. System Integrity Protection stays on and it asks for one permission instead of five. Shipping now as the first release of Wisp OS.",
+    stack: ['Swift 6', 'AppKit', 'macOS Accessibility API', 'Core Graphics', 'Swift Package Manager', 'Astro', 'Cloudflare Pages'],
+    link: 'https://wisp-os.com',
+    status: 'live',
+    featured: true,
+  },
+  {
     name: 'Apex CRM Sales Intelligence',
     tagline: 'RAG-Powered Competitive Intelligence Agent',
     description:
@@ -24,7 +34,6 @@ const PROJECTS: Project[] = [
     link: 'https://apex-sales-intel-production.up.railway.app',
     password: 'apex2026',
     status: 'live',
-    featured: true,
   },
   {
     name: 'Meridian Platform',
@@ -243,6 +252,28 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       >
         {project.description}
       </p>
+
+      {project.password && (
+        <div className="flex items-center gap-2">
+          <span
+            className="text-xs tracking-widest uppercase"
+            style={{ fontFamily: 'var(--font-jetbrains-mono)', color: 'var(--cream-dim)', fontSize: '0.65rem' }}
+          >
+            Demo password
+          </span>
+          <span
+            className="text-xs px-2 py-0.5 rounded"
+            style={{
+              fontFamily: 'var(--font-jetbrains-mono)',
+              color: 'var(--gold)',
+              background: 'rgba(201, 150, 58, 0.1)',
+              border: '1px solid rgba(201, 150, 58, 0.2)',
+            }}
+          >
+            {project.password}
+          </span>
+        </div>
+      )}
 
       <div className="flex flex-wrap gap-1.5">
         {project.stack.map((tech) => (

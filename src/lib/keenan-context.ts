@@ -25,6 +25,8 @@ TECHNICAL SKILLS:
 - Automation tools: Make (Integromat), webhooks, workflow builders
 - Full-stack development: Python/FastAPI, React, Next.js, SQLite/Supabase
 - Streaming interfaces (SSE, ReadableStream)
+- Native macOS development — Swift 6, AppKit, the Accessibility API, Core Graphics
+- Systems programming: window management, layout algorithms, config parsing, hotkey handling
 
 OTHER SKILLS:
 - AI Systems Architecture
@@ -36,41 +38,52 @@ OTHER SKILLS:
 - Cross-functional enablement & program management
 
 PROJECTS:
-1. Apex CRM Sales Intelligence (apex-sales-intel-production.up.railway.app) [FEATURED]
+1. Wisp OS / hyprmac (wisp-os.com) [FEATURED]
+   - What: A native tiling window manager for macOS in the shape of Hyprland. Windows lay themselves out and stay that way — open one and it takes its share of the screen, sized and positioned, never overlapping.
+   - Features: dwindle layout, gaps, a hyprland.conf-style plain-text config at ~/.config/wisp/wispos.conf, vim-style keybindings (Alt + HJKL), five named workspaces in the menu bar, three-finger trackpad gestures, a drag-to-swap/drag-to-split pointer interaction, an overview, and a canvas that paints your actual desktop picture beneath the windows
+   - Layouts survive a restart — it remembers the shape of each workspace, not just which windows were on it
+   - Apps that refuse to shrink (Electron, Catalyst) are detected and floated at their minimum size rather than squashed
+   - Built with: Swift 6, AppKit, the macOS Accessibility API, Core Graphics, Swift Package Manager. No dependencies and no bundled runtime, which is why the whole app is about 1 MB. Signed with a Developer ID certificate and notarized.
+   - Deliberate constraints: System Integrity Protection stays on (many window managers ask you to disable it — this one never does), and it asks for exactly one permission, Accessibility. Not Screen Recording, not Full Disk Access. A version that recorded the screen was built, worked, and was deleted on principle.
+   - Requirements: Apple Silicon (M1 or later), macOS 14 Sonoma or later. Free.
+   - Wisp OS is the umbrella project: hyprmac is the window manager, and Wisper — a local on-device model that can see the desktop and act on it — is the second half, not yet released.
+   - The marketing site (wisp-os.com) is Astro, static output, zero client-side JavaScript, on Cloudflare Pages.
+   - Status: Live — beta 0.1.0, shipping now
+
+2. Apex CRM Sales Intelligence (apex-sales-intel-production.up.railway.app)
    - What: A hybrid RAG sales assistant built with LangChain and Claude that answers competitive questions by searching internal battlecards/playbooks, live web data, or both
    - Uses a ReAct agent to reason step-by-step and pick the right tool for each query
    - Includes an LLM-as-judge eval suite scoring answers on relevance, groundedness, and completeness
-   - Built with: Python, LangChain, Anthropic Claude (Opus 4.5), Voyage AI (embeddings), ChromaDB, Tavily, Streamlit, Docker, Railway
+   - Built with: Python, LangChain, Anthropic Claude, Voyage AI (embeddings), ChromaDB, Tavily, Streamlit, Docker, Railway
    - Demo password: apex2026
    - Status: Live
 
-2. Valletta Command Center (github.com/kcarroll88/valletta-app)
-   - What: A purpose-built full-stack command center for a real working rock band — replacing scattered Google Docs, spreadsheets, and group chats with a single integrated system the whole band actually uses
-   - Features: 12 AI personas (band manager, publicist, booking agent, finance specialist, Discord bot, and more) with distinct personalities and live write access to the database via Claude tool use
-   - Syncs live data from: Google Calendar, Google Sheets, Google Drive, Square, Spotify, Last.fm, YouTube, Instagram, TikTok, Discord
-   - Includes: Full CRM, task management, show tracker, finance dashboard, merch inventory, press archive, setlist builder, streaming analytics
-   - Built with: FastAPI, React, SQLite, Anthropic Claude (Sonnet + Haiku), Discord.py, SSE
-   - Status: Live (used daily by the band)
+3. Meridian Platform (github.com/kcarroll88/meridian-platform)
+   - What: A production-grade multi-tenant RAG API where each tenant gets isolated document storage, per-tenant rate limiting via a Redis sliding window, and full usage tracking with trace IDs
+   - JWT admin auth, hashed API keys for tenants, per-tenant ChromaDB collection namespaces, LangSmith observability
+   - Load tested to 166 RPS at 0% error rate with infrastructure overhead under 50ms
+   - Built with: FastAPI, PostgreSQL, Redis, ChromaDB, Anthropic Claude, Voyage AI, LangChain, LangSmith, Docker, Railway
+   - Status: In progress
 
-3. RAG Document Chat (kcarroll-ai.streamlit.app)
-   - What: A production-style Retrieval Augmented Generation (RAG) system that lets users upload a PDF and ask natural language questions — getting answers grounded exclusively in their document
-   - No hallucination, no out-of-scope responses — Claude can only respond using content from the uploaded document
-   - Demonstrates the RAG pattern powering next-gen B2B AI features in enterprise SaaS
-   - Built with: Python, Anthropic Claude, Voyage AI (embeddings), ChromaDB (vector DB), Streamlit, pypdf
+4. Meridian Analytics Intelligence Assistant (github.com/kcarroll88/meridian-ops-intel)
+   - What: An AI research assistant that automatically routes natural language queries to internal documents or live web search
+   - Built on the ReAct agent pattern with a visual reasoning trace, so you can follow every thought, action and observation in real time
+   - Combines Voyage AI semantic search over a ChromaDB knowledge base with Tavily web retrieval in a single query
+   - Built with: Python, LangChain, Anthropic Claude, Voyage AI, ChromaDB, Tavily, Streamlit
    - Status: Live
 
-4. Dwello (dwello.cloud)
-   - What: A SaaS platform for landlords to manage tenants, leases, maintenance requests, and communication in one place
-   - Built with: Base44, Supabase, Stripe, AI-assisted backend logic
+5. Nexus Support Assistant (nexus-support-assistant-azq3guy4xvxbpnpyacswuq.streamlit.app)
+   - What: A support tool that answers questions by searching a knowledge base of PDF documents
+   - Loads docs into a vector database, finds relevant chunks via semantic search, and generates concise answers with full source attribution
+   - Built with: Python, LangChain, Anthropic Claude, Voyage AI, ChromaDB, Streamlit, pypdf
    - Status: Live
 
-5. AI Communication Automation System
-   - What: Processes inbound messages (SMS/email), extracts intent using LLMs, and routes actions automatically into business systems — eliminating manual coordination
-   - Built with: Twilio, Make (Integromat), Webhooks, LLM processing
-
-6. Local Lens
-   - What: A civic transparency app that extracts and organizes public meeting data into digestible insights — helps people understand local government decisions without reading dense documents
-   - Built with: Next.js, Supabase, scraping + structured data pipelines
+6. CRM Customer Health Monitor (crm-customer-health-monitor-gx3eohgt2yw2tczeuunckl.streamlit.app)
+   - What: An AI-powered health scoring dashboard for CRM account managers
+   - Claude analyzes each account across login activity, support tickets, email engagement, NPS and sentiment, producing a 1-100 health score, a risk classification (Healthy / Warning / Critical), and specific recommended actions
+   - Includes automated daily digest reports and an optional 8am scheduler
+   - Built with: Python, Anthropic Claude, Streamlit, Resend
+   - Status: Live
 
 EXPERIENCE:
 - Independent AI Builder & Product Developer (2023 — Present): Designing and shipping AI-powered systems for real-world business operations
@@ -88,9 +101,9 @@ RESPONSE GUIDELINES:
 - You may use markdown formatting (bold, bullets, code) when it helps clarity`;
 
 export const SUGGESTED_QUESTIONS = [
+  "What is Wisp OS?",
+  "Tell me about hyprmac",
   "What kind of systems does Keenan build?",
-  "Tell me about Valletta Command Center",
   "What AI tools does he work with?",
-  "What's his background?",
   "What's he currently working on?",
 ];
