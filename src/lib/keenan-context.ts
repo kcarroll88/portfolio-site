@@ -90,8 +90,9 @@ PROJECTS:
    - Each brain is a 24->16->4 NumPy network; a population of 30 walks each generation, the best 5 elites are kept, and children are elite copies with Gaussian mutation
    - The trainer runs headless and unattended: it persists every generation so a crash resumes exactly, records replays of each champion's walk, and exposes the run through a small read-only API
    - Covered by a 94-test suite
+   - Why: built as a hands-on way to learn ML engineering (fitness noise, reproducibility, resumable long-running jobs)
    - Built with: Python, NumPy, Gymnasium, Box2D, FastAPI, SQLite, pytest, Docker
-   - Status: Complete (portfolio piece)
+   - Status: Paused for now (not deployed; there is no live demo)
 
 EXPERIENCE:
 - Independent AI Builder & Product Developer (2023 — Present): Designing and shipping AI-powered systems for real-world business operations

@@ -10,7 +10,7 @@ interface Project {
   stack: string[];
   link?: string;
   password?: string;
-  status: 'live' | 'in-progress' | 'complete';
+  status: 'live' | 'in-progress' | 'complete' | 'paused';
   featured?: boolean;
 }
 
@@ -75,9 +75,9 @@ const PROJECTS: Project[] = [
     name: 'Walker',
     tagline: 'A 2D Walker That Learns to Walk Through Neuroevolution',
     description:
-      "A bipedal walker in Gymnasium's BipedalWalker-v3 that teaches itself to walk with no backpropagation, only selection and mutation. Each brain is a 24→16→4 NumPy network; a population of 30 walks, the best 5 elites survive, and the next generation is their copies with Gaussian mutation. Around it sits a headless trainer built to run unattended: it persists every generation so a crash resumes exactly where it stopped, records replays of each champion's walk, and serves the run through a small read-only API. Covered by a 94-test suite.",
+      "A bipedal walker in Gymnasium's BipedalWalker-v3 that teaches itself to walk with no backpropagation, only selection and mutation. Each brain is a 24→16→4 NumPy network; a population of 30 walks, the best 5 elites survive, and the next generation is their copies with Gaussian mutation. Around it sits a headless trainer built to run unattended: it persists every generation so a crash resumes exactly where it stopped, records replays of each champion's walk, and serves the run through a small read-only API. Covered by a 94-test suite. Built as a hands-on way to learn ML engineering; paused for now.",
     stack: ['Python', 'NumPy', 'Gymnasium', 'Box2D', 'FastAPI', 'SQLite', 'pytest', 'Docker'],
-    status: 'complete',
+    status: 'paused',
   },
 ];
 
@@ -85,6 +85,7 @@ const STATUS_STYLES = {
   live: { dot: '#28CA41', label: 'Live' },
   'in-progress': { dot: '#FFBD2E', label: 'In Progress' },
   complete: { dot: 'var(--gold)', label: 'Complete' },
+  paused: { dot: '#8A8A8A', label: 'Paused' },
 };
 
 function FeaturedProject({ project }: { project: Project }) {
