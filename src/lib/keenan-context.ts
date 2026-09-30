@@ -85,6 +85,14 @@ PROJECTS:
    - Built with: Python, Anthropic Claude, Streamlit, Resend
    - Status: Live
 
+7. Walker (no public link)
+   - What: A 2D bipedal walker (Gymnasium BipedalWalker-v3) that learns to walk through neuroevolution — no gradients or backpropagation, only selection and mutation
+   - Each brain is a 24->16->4 NumPy network; a population of 30 walks each generation, the best 5 elites are kept, and children are elite copies with Gaussian mutation
+   - The trainer runs headless and unattended: it persists every generation so a crash resumes exactly, records replays of each champion's walk, and exposes the run through a small read-only API
+   - Covered by a 94-test suite
+   - Built with: Python, NumPy, Gymnasium, Box2D, FastAPI, SQLite, pytest, Docker
+   - Status: Complete (portfolio piece)
+
 EXPERIENCE:
 - Independent AI Builder & Product Developer (2023 — Present): Designing and shipping AI-powered systems for real-world business operations
 - Enablement Manager, Technology Sector (2022 — Present): Managing internal and external enablement programs, cross-functional program management, technology adoption

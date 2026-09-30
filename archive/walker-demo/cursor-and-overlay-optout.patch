@@ -1,0 +1,49 @@
+diff --git a/src/app/globals.css b/src/app/globals.css
+index 87e8822..480e029 100644
+--- a/src/app/globals.css
++++ b/src/app/globals.css
+@@ -198,6 +198,26 @@ body {
+   z-index: 9999;
+ }
+ 
++/* /walker opts out of the custom cursor and noise overlay (class set by WalkerDemo):
++   the canvas and the timeline slider want the native cursor, and the overlay sits on the drawing. */
++html.walker-page,
++html.walker-page *,
++html.walker-page *::before,
++html.walker-page *::after {
++  cursor: auto !important;
++}
++html.walker-page button,
++html.walker-page a,
++html.walker-page input[type='range'] {
++  cursor: pointer !important;
++}
++html.walker-page [data-custom-cursor] {
++  display: none;
++}
++html.walker-page body.noise::before {
++  display: none;
++}
++
+ /* Mobile: fixed scroll container at top:0 — overflow-y clips content at viewport top,
+    mask-image fades content out as it approaches the header so there's no hard cutoff line */
+ @media (max-width: 1023px) {
+diff --git a/src/components/CustomCursor.tsx b/src/components/CustomCursor.tsx
+index 9a96f50..4e70a7a 100644
+--- a/src/components/CustomCursor.tsx
++++ b/src/components/CustomCursor.tsx
+@@ -83,11 +83,13 @@ export default function CustomCursor() {
+     <>
+       <div
+         ref={dotRef}
++        data-custom-cursor
+         className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] will-change-transform"
+         style={{ backgroundColor: 'var(--gold)' }}
+       />
+       <div
+         ref={ringRef}
++        data-custom-cursor
+         className="fixed top-0 left-0 w-10 h-10 rounded-full pointer-events-none z-[9998] will-change-transform transition-[width,height,border-color] duration-200"
+         style={{ border: '1px solid rgba(201, 150, 58, 0.4)' }}
+       />

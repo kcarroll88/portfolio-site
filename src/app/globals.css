@@ -198,26 +198,6 @@ body {
   z-index: 9999;
 }
 
-/* /walker opts out of the custom cursor and noise overlay (class set by WalkerDemo):
-   the canvas and the timeline slider want the native cursor, and the overlay sits on the drawing. */
-html.walker-page,
-html.walker-page *,
-html.walker-page *::before,
-html.walker-page *::after {
-  cursor: auto !important;
-}
-html.walker-page button,
-html.walker-page a,
-html.walker-page input[type='range'] {
-  cursor: pointer !important;
-}
-html.walker-page [data-custom-cursor] {
-  display: none;
-}
-html.walker-page body.noise::before {
-  display: none;
-}
-
 /* Mobile: fixed scroll container at top:0 — overflow-y clips content at viewport top,
    mask-image fades content out as it approaches the header so there's no hard cutoff line */
 @media (max-width: 1023px) {

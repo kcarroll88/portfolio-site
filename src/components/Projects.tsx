@@ -71,6 +71,14 @@ const PROJECTS: Project[] = [
     link: 'https://crm-customer-health-monitor-gx3eohgt2yw2tczeuunckl.streamlit.app',
     status: 'live',
   },
+  {
+    name: 'Walker',
+    tagline: 'A 2D Walker That Learns to Walk Through Neuroevolution',
+    description:
+      "A bipedal walker in Gymnasium's BipedalWalker-v3 that teaches itself to walk with no backpropagation, only selection and mutation. Each brain is a 24→16→4 NumPy network; a population of 30 walks, the best 5 elites survive, and the next generation is their copies with Gaussian mutation. Around it sits a headless trainer built to run unattended: it persists every generation so a crash resumes exactly where it stopped, records replays of each champion's walk, and serves the run through a small read-only API. Covered by a 94-test suite.",
+    stack: ['Python', 'NumPy', 'Gymnasium', 'Box2D', 'FastAPI', 'SQLite', 'pytest', 'Docker'],
+    status: 'complete',
+  },
 ];
 
 const STATUS_STYLES = {
