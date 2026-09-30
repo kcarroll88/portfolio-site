@@ -83,11 +83,13 @@ export default function CustomCursor() {
     <>
       <div
         ref={dotRef}
+        data-custom-cursor
         className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] will-change-transform"
         style={{ backgroundColor: 'var(--gold)' }}
       />
       <div
         ref={ringRef}
+        data-custom-cursor
         className="fixed top-0 left-0 w-10 h-10 rounded-full pointer-events-none z-[9998] will-change-transform transition-[width,height,border-color] duration-200"
         style={{ border: '1px solid rgba(201, 150, 58, 0.4)' }}
       />
